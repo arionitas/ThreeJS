@@ -27,3 +27,10 @@ const canvas = document.querySelector('.webgl');
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(800, 600);
 renderer.render(scene, camera);
+
+
+// LIGHTING - adding lights to the scene
+
+const light = new THREE.PointLight(0xffffff, 1, 100);
+light.position.set(0, 10, 10)
+scene.add(light);
